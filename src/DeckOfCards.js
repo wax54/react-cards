@@ -3,10 +3,6 @@ import Card from './Card';
 
 import axios from "axios";
 
-
-
-
-
 const DeckOfCards = () => {
     const DRAW_SPEED = 1000;
     const [ cards, setCards ] = useState([]);

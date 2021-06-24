@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match previous snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="EditTodoForm"
+  >
+    <label
+      for="title-input"
+    />
+    <input
+      class="EditTodoForm-title"
+      data-testid="EditTodoForm-input"
+      id="title-input"
+      name="title"
+      required=""
+      type="text"
+      value=""
+    />
+    <button>
+      Update
+    </button>
+  </form>
+</DocumentFragment>
+`;

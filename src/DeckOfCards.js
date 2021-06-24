@@ -14,7 +14,7 @@ const DeckOfCards = () => {
         setDrawingCards(currState => !currState);
     };
 
-    const cardsLeft = () => cards.length - 52;
+    const cardsLeft = cards.length < 52;
 
     const drawCard = () => {
         axios.get(`https://deckofcardsapi.com/api/deck/${deckId.current}/draw/?count=1`)
@@ -48,13 +48,14 @@ const DeckOfCards = () => {
 
     return (
         <div>
-            { cardsLeft() !== 0 &&
+            { cardsLeft ? (
                 <button onClick={toggleDrawingCards}>
                     {drawingCards ? "Stop Drawing" : "Start Drawing" }
                 </button>
+                ) : null
             }
             
-            { cards.length !== 0 && 
+            { cards.length === 0 ? null :
                 <Card card={cards[cards.length - 1]} /> 
             }
         </div>
